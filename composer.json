@@ -1,0 +1,21 @@
+{
+	"name": "atomphp/http",
+	"homepage": "https://github.com/atomphp/http",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Chase Hutchins",
+			"homepage": "http://syntaqx.com",
+			"email": "syntaqx@gmail.com"
+		}
+	],
+	"require": {
+		"php": ">=5.3.3"
+	},
+	"autoload": {
+		"psr-0": {
+			"Atom\\Tests\\Http": "tests/",
+			"Atom\\Http": "src/"
+		}
+	}
+}
