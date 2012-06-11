@@ -17,8 +17,8 @@ class Response
 	 * Unless otherwise noted, the status codes are defined in RFC2616
 	 *
 	 * @var array
-     */
-	private $statusTextDefaults = array(
+	 */
+	protected static $statusTextDefaults = array(
 		// 1xx Informational
 		100 => 'Continue',
 		101 => 'Switching Protocols',
