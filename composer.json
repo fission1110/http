@@ -1,5 +1,7 @@
 {
 	"name": "atomphp/http",
+	"type": "library",
+	"description": "An object-oriented interface into the HTTP specification",
 	"homepage": "https://github.com/atomphp/http",
 	"license": "MIT",
 	"authors": [
