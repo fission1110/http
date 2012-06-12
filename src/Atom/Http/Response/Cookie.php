@@ -42,7 +42,6 @@ class Cookie implements ResponseInterface
          * Get an array of options set to a specific key
          *
          * @return void
-         * @author Ryan Pierce
          **/
         public function getOptions($key)
         {

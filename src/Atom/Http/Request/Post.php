@@ -7,7 +7,7 @@ namespace Atom\Http\Request;
  * @package http
  * @author Ryan Pierce
  **/
-abstract class Post implements RequestInterface
+class Post implements RequestInterface
 {
 		/**
 		 * Returns the post value of $key

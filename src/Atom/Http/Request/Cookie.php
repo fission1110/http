@@ -7,7 +7,7 @@ namespace Atom\Http\Request;
  * @package default
  * @author Ryan Pierce
  **/
-abstract class Cookie implements RequestInterface
+class Cookie implements RequestInterface
 {
 		/**
 		 * Gets a cookie with a given $key

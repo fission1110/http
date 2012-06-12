@@ -7,7 +7,7 @@ namespace Atom\Http\Request;
  * @packaged http
  * @author Ryan Pierce
  **/
-abstract class Header implements RequestInterface
+class Header implements RequestInterface
 {
 		/**
 		 * Gets a request header value, either by the header name given in the 
@@ -15,7 +15,6 @@ abstract class Header implements RequestInterface
 		 * http://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html#sec5.3
 		 *
 		 * @return string
-		 * @author Ryan Pierce
 		 **/
 		public function get($key)
 		{
@@ -106,7 +105,6 @@ abstract class Header implements RequestInterface
 		 * array. Returns according to rfc2616 section 5 standards NOT php's standards.
 		 *
 		 * @return array
-		 * @author Ryan Pierce
 		 **/
 		public function getAll()
 		{
@@ -148,5 +146,14 @@ abstract class Header implements RequestInterface
 				}
 				//return the $output array
 				return $output;
+		}
+		
+		/**
+		 * undocumented function
+		 *
+		 * @return void
+		 **/
+		public function __toString()
+		{
 		}
 } // END abstract class Header

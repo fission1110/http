@@ -66,7 +66,6 @@ class Header implements ResponseInterface
 		 * Gets header key
 		 *
 		 * @return string
-		 * @author Ryan Pierce
 		 **/
 		public function get($key)
 		{
@@ -91,7 +90,6 @@ class Header implements ResponseInterface
 		 * Returns an associative array of all set keys
 		 *
 		 * @return array
-		 * @author Ryan Pierce
 		 **/
 		public function getAll()
 		{
@@ -103,7 +101,6 @@ class Header implements ResponseInterface
 		 * uniform.
 		 *
 		 * @return void
-		 * @author Ryan Pierce
 		 **/
 		public function getOptions($key)
 		{
@@ -113,7 +110,6 @@ class Header implements ResponseInterface
 		 * Sets $key to $value. $options are ignored.
 		 *
 		 * @return void
-		 * @author Ryan Pierce
 		 **/
 		public function set($key, $value, $options = array())
 		{
@@ -144,7 +140,6 @@ class Header implements ResponseInterface
 		 * Removes a given $key. Returns 1 on success, 0 on failure.
 		 *
 		 * @return boolean
-		 * @author Ryan Pierce
 		 **/
 		public function remove($key)
 		{
@@ -155,7 +150,6 @@ class Header implements ResponseInterface
 		 * Resets the entire class
 		 *
 		 * @return void
-		 * @author Ryan Pierce
 		 **/
 		public function reset()
 		{
@@ -166,7 +160,6 @@ class Header implements ResponseInterface
 		 * Sends the headers
 		 *
 		 * @return void
-		 * @author Ryan Pierce
 		 **/
 		public function submit()
 		{
@@ -180,7 +173,6 @@ class Header implements ResponseInterface
 		 * Sends the entire submit data as a string
 		 *
 		 * @return void
-		 * @author Ryan Pierce
 		 **/
 		public function __toString()
 		{

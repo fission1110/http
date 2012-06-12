@@ -27,7 +27,6 @@ interface ResponseInterface
 		 * Returns the options for a given $key
 		 *
 		 * @return array
-		 * @author Ryan Pierce
 		 **/
 		public function getOptions($key);
 
@@ -42,7 +41,6 @@ interface ResponseInterface
 		 * Removes a $key from the class. Returns 1 on success, NULL on failure.
 		 *
 		 * @return boolean
-		 * @author Ryan Pierce
 		 **/
 		public function remove($key);
 
@@ -58,7 +56,6 @@ interface ResponseInterface
 		 * Submits the class. For example, sends headers, and sets the cookies
 		 *
 		 * @return void
-		 * @author Ryan Pierce
 		 **/
 		public function submit();
 

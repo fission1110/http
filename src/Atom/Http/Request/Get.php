@@ -6,7 +6,7 @@ namespace Atom\Http\Request;
  * @packaged default
  * @author Ryan Pierce
  **/
-abstract class Get implements RequestInterface
+class Get implements RequestInterface
 {
 		/**
 		 * Gets a variable by $key
