@@ -27,7 +27,7 @@ class Response
 		 *
 		 * @return Object Cookie
 		 **/
-		private static function Cookie()
+		public static function Cookie()
 		{
 				if(!self::$Cookie)
 				{
@@ -41,7 +41,7 @@ class Response
 		 *
 		 * @return Object Header
 		 **/
-		private static function Header()
+		public static function Header()
 		{
 				if(!self::$Header)
 				{

@@ -16,7 +16,7 @@ class Cookie implements RequestInterface
 		 **/
 		public function get($key)
 		{
-				if (isset($key)) 
+				if (isset($_COOKIE[$key])) 
 				{
 					return $_COOKIE[$key];
 				}
