@@ -43,4 +43,14 @@ class Post implements RequestInterface
 				}
 				
 		}
+
+		/**
+		 * Returns all the post values as a string
+		 *
+		 * @return void
+		 * @author Ryan Pierce
+		 **/
+		public function __toString()
+		{
+		}
 } // END interface PostInterface

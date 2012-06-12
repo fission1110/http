@@ -38,4 +38,13 @@ class Cookie implements RequestInterface
 						return $_COOKIE;
 				}
 		}
+
+		/**
+		 * Returns cookies as a string
+		 *
+		 * @return void
+		 **/
+		public function __toString()
+		{
+		}
 }

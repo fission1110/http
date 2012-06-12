@@ -41,5 +41,14 @@ class Get implements RequestInterface
 						return NULL;
 				}
 		}
+		
+		/**
+		 * Returns get object as a string
+		 *
+		 * @return string
+		 **/
+		public function __toString()
+		{
+		}
 
 } // END abstract class Get

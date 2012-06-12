@@ -13,7 +13,7 @@ Now something different.
 ```php
 $baz = \Atom\Http\Response::Header();
 ```
-$baz no contains a Header object. Let's set some new headers.
+$baz now contains a Header object. Let's set some new headers.
 ```php
 $baz->set('Content-Type', 'application/pdf');
 ```
