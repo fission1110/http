@@ -43,12 +43,19 @@ class Get implements RequestInterface
 		}
 		
 		/**
-		 * Returns get object as a string
+		 * Returns get object as a url encoded string
 		 *
 		 * @return string
 		 **/
 		public function __toString()
 		{
+				$output = '';
+				foreach ($_GET as $key=>$value) 
+				{
+					$output .= urlencode($key) . '=' . urlencode($value) . '&';
+				}
+				$output = rtrim($output, '&');
+				return $output;
 		}
 
 } // END abstract class Get

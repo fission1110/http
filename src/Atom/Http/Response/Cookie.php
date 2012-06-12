@@ -55,12 +55,15 @@ class Cookie implements ResponseInterface
          *
          * @return void
          **/
-        public function set($key, $value, $options = array('expire'         => 0,
-                                                             'path'         => '/',
-                                                             'domain'       => '',
-                                                             'secure'       => false,
-                                                             'httponly'     => false,))
+        public function set($key, $value, $options)
         {
+				$defaults =	array('expire'         => 0,
+                    			  'path'         => '/',
+                     			  'domain'       => '',
+                  		 		  'secure'       => false,
+                			      'httponly'     => false,
+			  	);
+				$options = array_merge($defaults, $options);
                 $this->Cookie[$key] = array($value, $options);
         }
 
@@ -104,12 +107,26 @@ class Cookie implements ResponseInterface
         }
 
         /**
-         * Returns a string containing all cookies, urlencoded to rfc2616 
+         * Returns a string containing all cookies to rfc2616 
          * specifications.
          *
          * @return string
          **/
         public function __toString()
         {
+				$output = '';
+				foreach ($this->Cookie as $key=>$value) 
+				{
+						$output .= $key . '=' . $value[0] . '; ';
+						foreach ($value[1] as $optionKey=>$optionValue) 
+						{
+							if($optionValue || $optionValue === 0)
+							{
+								$output .= $optionKey . '=' . $optionValue . '; ';
+							}
+						}
+						$output .= "\r\n";
+				}
+				return $output;
         }
 } // END class Cookie implements ResponseInterface.php

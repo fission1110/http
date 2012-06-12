@@ -176,7 +176,12 @@ class Header implements ResponseInterface
 		 **/
 		public function __toString()
 		{
-
+				$output = '';
+				foreach ($this->Header as $key=>$value) 
+				{
+					$output .= $key . ': ' . $value ."\r\n";
+				}
+				return $output;
 		}
 	
 } // END abstract class Header
