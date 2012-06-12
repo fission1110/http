@@ -1,19 +1,96 @@
-<?php namespace Atom\Http;
-
+<?php
+namespace Atom\Http;
 /**
- * Request class
+ * Request class is the main interface into the request namespace
  *
- * @package    Atom
- * @subpackage Http
- */
+ * @packaged Http
+ * @author Ryan Pierce
+ **/
+use Atom\Http\Request;
 class Request
 {
-	// HTTP Request methods
-	const METHOD_HEAD     = 'HEAD';
-	const METHOD_GET      = 'GET';
-	const METHOD_POST     = 'POST';
-	const METHOD_PUT      = 'PUT';
-	const METHOD_DELETE   = 'DELETE';
-	const METHOD_OPTIONS  = 'OPTIONS';
-	const METHOD_OVERRIDE = '_METHOD';
-}
+		/**
+		 * A Cookie object storage variable 
+		 *
+		 * @var string
+		 **/
+		private static $Cookie;
+
+		/**
+		 * A Get object storage variable
+		 *
+		 * @var string
+		 **/
+		private static $Get;
+
+		/**
+		 * A Header object storage variable
+		 *
+		 * @var string
+		 **/
+		private static $Header;
+
+		/**
+		 * A Post object storage variable
+		 *
+		 * @var string
+		 **/
+		private static $Post;
+
+		/**
+		 * Singleton method for returning a cookie object
+		 *
+		 * @return Object	Cookie object
+		 **/
+		public static function Cookie()
+		{
+				if (!self::$Cookie) 
+				{
+						self::$Cookie = new Request\Cookie;
+				}
+				return self::$Cookie;
+		}
+
+		/**
+		 * Singleton method for returning a Get object
+		 *
+		 * @return Object	Get object
+		 **/
+		public static function Get()
+		{
+				if (!self::$Get) 
+				{
+						self::$Get = new Request\Get;
+				}
+				return self::$Get;
+		}
+
+		/**
+		 * Singleton method for returning a Header object
+		 *
+		 * @return Object	Header object
+		 **/
+		public static function Header()
+		{
+				if (!self::$Header) 
+				{
+						self::$Header = new Request\Header;
+				}
+				return self::$Header;
+		}
+
+		/**
+		 * Singleton method for returning a Post object
+		 *
+		 * @return Object	Post object
+		 **/
+		public static function Post()
+		{
+				if (!self::$Post) 
+				{
+						self::$Post = new Request\Post;
+				}
+				return self::$Post;
+		}
+
+} // END class Request
