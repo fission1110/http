@@ -4,12 +4,14 @@ First step is to call the Request or Response singleton objects to gain access i
 
 For example
 ```php
-$foo = new \Atom\Http\Request::Post()->get($bar);
+$foo = \Atom\Http\Request::Post()->get($bar);
 ```
-$foo now contains the value of the post key $bar;
+$foo now contains the value of the post key $bar.
+
+Now something different.
 ===========
 ```php
-$baz = new \Atom\Http\Response::Header();
+$baz = \Atom\Http\Response::Header();
 ```
 $baz no contains a Header object. Let's set some new headers.
 ```php
