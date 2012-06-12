@@ -33,9 +33,9 @@ class Post implements RequestInterface
 		 **/
 		public function getAll()
 		{
-				if (isset($_GET)) 
+				if (isset($_POST)) 
 				{
-					return $_GET;
+					return $_POST;
 				}
 				else
 				{
@@ -52,5 +52,12 @@ class Post implements RequestInterface
 		 **/
 		public function __toString()
 		{
+				$output = '';
+				foreach ($_POST as $key=>$value) 
+				{
+						$output .= $key . '=' . $value . '&';
+				}
+				$output = rtrim($output, '&');
+				return $output;
 		}
 } // END interface PostInterface

@@ -149,11 +149,30 @@ class Header implements RequestInterface
 		}
 		
 		/**
-		 * undocumented function
+		 * Changes all the Requested header into an RFC 2616 compatable 
+		 * string.
 		 *
-		 * @return void
+		 * @return string
 		 **/
 		public function __toString()
 		{
+				$Header = $this->getAll();
+				$output = '';
+				foreach ($Header as $rowName=>$rowValue) 
+				{
+					if (is_array($rowValue)) 
+					{
+						foreach ($rowValue as $value) 
+						{
+								$output .= $value;
+						}
+					}
+					else
+					{
+						$output .= $rowName . ': ' . $rowValue . "\r\n";
+					}
+				}
+				return $output;
+
 		}
 } // END abstract class Header

@@ -46,5 +46,11 @@ class Cookie implements RequestInterface
 		 **/
 		public function __toString()
 		{
+				$output = '';
+				foreach ($_COOKIE as $key=>$value) 
+				{
+					$output .= $key . '=' . $value . '; ';
+				}
+				return $output;
 		}
 }
